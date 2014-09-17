@@ -4,7 +4,7 @@ def is_prime?(n)
     return false if n==0 || n==1
     return true if n==2
     i=2
-    while i < Math.sqrt(n)
+    while i <= Math.sqrt(n)
         return false if n % i == 0
         i +=1
     end
@@ -38,5 +38,7 @@ def find_false_goldbach
     end
 end
 
+if $PROGRAM_NAME == __FILE__
 p find_false_goldbach
+end
 
