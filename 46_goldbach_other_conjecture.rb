@@ -29,17 +29,12 @@ def find_false_goldbach
     num=3
     loop do
         if num%2 == 0
-            num += 1
-            next
         elsif is_prime?(num)
             primes << num
-            num += 1
-            next
         else
             return num if check_composite(num, primes)==false
-            num += 1
-            next
         end
+        num += 1
     end
 end
 
