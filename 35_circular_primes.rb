@@ -1,4 +1,5 @@
 #https://projecteuler.net/problem=35
+
 require './46_goldbach_other_conjecture.rb'
 
 def find_primes(num)
