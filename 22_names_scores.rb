@@ -37,10 +37,12 @@ def find_alphabetical_value(name, i)
     value * (i + 1)
 end
 
-names = []
-names = File.read('22_names.txt').scan(/\w+/).sort
-result = 0
-names.each_with_index do |name, index|
-    result += find_alphabetical_value(name, index)
+if $PROGRAM_NAME == __FILE__
+    names = []
+    names = File.read('22_names.txt').scan(/\w+/).sort
+    result = 0
+    names.each_with_index do |name, index|
+        result += find_alphabetical_value(name, index)
+    end
+    p result
 end
-p result
